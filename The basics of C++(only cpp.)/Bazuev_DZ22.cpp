@@ -2,21 +2,21 @@
 using namespace std;
 
 
-//			«јƒј„ј є1
+//			ЗАДАЧА №1
 
-/*ƒополните свою библиотеку функций реализаци¤ми нижеследующих функций:
-- int mystrcmp (const char * str1, const char * str2); Ч 
-функци¤ сравнивает две строки, и, если строки равны 
-возвращает 0, если перва¤ строка больше второй, то 
-возвращает 1, иначе Ц1.
-- int StringToNumber(char * str); Ч функци¤ конвертирует строку в число и возвращает это число.
-- char * NumberToString (int number); Ч функци¤ конвертирует число в строку и возвращает указатель на 
+/*Дополните свою библиотеку функций реализациями нижеследующих функций:
+- int mystrcmp (const char * str1, const char * str2); — 
+функция сравнивает две строки, и, если строки равны 
+возвращает 0, если первая строка больше второй, то 
+возвращает 1, иначе –1.
+- int StringToNumber(char * str); — функция конвертирует строку в число и возвращает это число.
+- char * NumberToString (int number); — функция конвертирует число в строку и возвращает указатель на 
 эту строку.
-- char * Uppercase (char * str1); Ч функци¤ преобразует 
+- char * Uppercase (char * str1); — функция преобразует 
 строку в верхний регистр.
-- char * Lowercase (char * str1); Ч функци¤ преобразует 
+- char * Lowercase (char * str1); — функция преобразует 
 строку в нижний регистр.
-- char * mystrrev (char * str); Ч функци¤ реверсирует 
+- char * mystrrev (char * str); — функция реверсирует 
 строку и возвращает указатель на новую строку.*/
 
 int MyStrCmp(const char* str1, const char* str2)
@@ -171,26 +171,26 @@ void main()
 
 	int resultMyStrCmp = MyStrCmp(strCmp1, strCmp2);
 
-	cout << "–езультат вызова функции MyStrCmp(): ";
+	cout << "Результат вызова функции MyStrCmp(): ";
 	if (resultMyStrCmp > 0)
-		cout << "ѕерва¤ строка больше" << endl;
+		cout << "Первая строка больше" << endl;
 	else if (resultMyStrCmp < 0)
-		cout << "¬тора¤ строка больше" << endl;
+		cout << "Вторая строка больше" << endl;
 	else
-		cout << "—троки равны" << endl;
+		cout << "Строки равны" << endl;
 	cout << endl;
 
 
 	//StringToNumber
 	char strIsNum[10] = "-12345678";
 	int resultStrToNum = StringToNumber(strIsNum);
-	cout << "–езультат вызова функции StringToNumber(): " << resultStrToNum << endl;
+	cout << "Результат вызова функции StringToNumber(): " << resultStrToNum << endl;
 	cout << endl;
 
 
 	//NumberToString 
 	char* numIsStr = NumberToString(-12345678);
-	cout << "–езультат вызова функции NumberToString(): " << numIsStr << endl;
+	cout << "Результат вызова функции NumberToString(): " << numIsStr << endl;
 	cout << endl;
 	delete[] numIsStr;
 
@@ -200,21 +200,21 @@ void main()
 
 	//UpperCase
 	char* upperCaseStr = UpperCase(strForUpperAndLowerCasesAndMyStrRev);
-	cout << "–езультат вызова функции UpperCase(): " << upperCaseStr << endl;
+	cout << "Результат вызова функции UpperCase(): " << upperCaseStr << endl;
 	cout << endl;
 	delete[] upperCaseStr;
 
 
 	//LowerCase
 	char* lowerCaseStr = LowerCase(strForUpperAndLowerCasesAndMyStrRev);
-	cout << "–езультат вызова функции LowerCase(): " << lowerCaseStr << endl;
+	cout << "Результат вызова функции LowerCase(): " << lowerCaseStr << endl;
 	cout << endl;
 	delete[] lowerCaseStr;
 
 
 	//MyStrRev
 	char* reverseStr = MyStrRev(strForUpperAndLowerCasesAndMyStrRev);
-	cout << "–езультат вызова функции MyStrRev(): " << reverseStr << endl;
+	cout << "Результат вызова функции MyStrRev(): " << reverseStr << endl;
 	cout << endl;
 	delete[] reverseStr;
 

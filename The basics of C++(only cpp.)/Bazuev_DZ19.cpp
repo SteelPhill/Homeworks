@@ -20,11 +20,11 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 }
 
 
-//			«јƒј„ј є1
-/*»спользу¤ два указател¤ на массив целых 
-чисел, скопировать один массив в другой. »спользовать 
-в программе арифметику указателей дл¤ продвижени¤
-по массиву, а также оператор разыменовани¤.*/
+//			ЗАДАЧА №1
+/*Используя два указателя на массив целых 
+чисел, скопировать один массив в другой. Использовать 
+в программе арифметику указателей для продвижения
+по массиву, а также оператор разыменования.*/
 
 //template<typename TValue>
 //void CopyingAnArray(TValue* originalArray, TValue* arrayToCopy, int size)
@@ -39,14 +39,14 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 //
 //	setlocale(LC_ALL, "ru");
 //
-//	cout << "»сходный массив:" << endl;
+//	cout << "Исходный массив:" << endl;
 //	int originalArray[Size];
 //	FillingOneDimensionalArrayInOrderOfOne(originalArray, Size);
 //	ShowOneDimensionalArray(originalArray, Size);
 //
 //	cout << endl;
 //
-//	cout << " опи¤ исходного массива:" << endl;
+//	cout << "Копия исходного массива:" << endl;
 //	int copyOfOriginalArray[Size];
 //	CopyingAnArray(originalArray, copyOfOriginalArray, Size);
 //	ShowOneDimensionalArray(copyOfOriginalArray, Size);
@@ -56,12 +56,12 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 //}
 
 
-//			«јƒј„ј є2
-/*»спользу¤ указатель на массив целых чисел, 
-изменить пор¤док следовани¤ элементов массива на 
+//			ЗАДАЧА №2
+/*Используя указатель на массив целых чисел, 
+изменить порядок следования элементов массива на 
 противоположный. 
-»спользовать в программе арифметику указателей 
-дл¤ продвижени¤ по массиву, а также оператор разыменовани¤.*/
+Использовать в программе арифметику указателей 
+для продвижения по массиву, а также оператор разыменования.*/
 
 //template<typename TValue>
 //void FlippingAnArray(TValue* arr, int size)
@@ -79,14 +79,14 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 //
 //	setlocale(LC_ALL, "ru");
 //
-//	cout << "»сходный массив:" << endl;
+//	cout << "Исходный массив:" << endl;
 //	int arr[Size];
 //	FillingOneDimensionalArrayInOrderOfOne(arr, Size);
 //	ShowOneDimensionalArray(arr, Size);
 //
 //	cout << endl;
 //
-//	cout << "ѕеревернутый исходный массив:" << endl;
+//	cout << "Перевернутый исходный массив:" << endl;
 //	FlippingAnArray(arr, Size);
 //	ShowOneDimensionalArray(arr, Size);
 //
@@ -95,12 +95,12 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 //}
 
 
-//			«јƒј„ј є3
-/*»спользу¤ два указател¤ на массивы целых 
+//			ЗАДАЧА №3
+/*Используя два указателя на массивы целых 
 чисел, скопировать один массив в другой так, чтобы во 
-втором массиве элементы находились в обратном пор¤дке. 
-»спользовать в программе арифметику указателей 
-дл¤ продвижени¤ по массиву, а также оператор разыменовани¤.*/
+втором массиве элементы находились в обратном порядке. 
+Использовать в программе арифметику указателей 
+для продвижения по массиву, а также оператор разыменования.*/
 
 //template<typename TValue>
 //void CopyingAnFlippingArray(TValue* originalArray, TValue* arrayToCopy, int size)
@@ -115,14 +115,14 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 //
 //	setlocale(LC_ALL, "ru");
 //
-//	cout << "»сходный массив:" << endl;
+//	cout << "Исходный массив:" << endl;
 //	int originalArray[Size];
 //	FillingOneDimensionalArrayInOrderOfOne(originalArray, Size);
 //	ShowOneDimensionalArray(originalArray, Size);
 //
 //	cout << endl;
 //
-//	cout << " опи¤ перевернутого исходного массива:" << endl;
+//	cout << "Копия перевернутого исходного массива:" << endl;
 //	int copyOfOriginalArray[Size];
 //	CopyingAnFlippingArray(originalArray, copyOfOriginalArray, Size);
 //	ShowOneDimensionalArray(copyOfOriginalArray, Size);
@@ -134,13 +134,13 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 
 
 
-////			–ешение 3-х задач с помощью массива указателей и указател¤ на функцию, как аргумента.
+////			Решение 3-х задач с помощью массива указателей и указателя на функцию, как аргумента.
 //
 //
 //void ShowResult(void(*taskNumber)(int*, int*, int), int count, int* originalArray, int* copyOfOriginalArray, int size)
 //{
 //	taskNumber(originalArray, copyOfOriginalArray, size);
-//	cout << "–езультат задачи є" << count << endl;
+//	cout << "Результат задачи №" << count << endl;
 //	ShowOneDimensionalArray(copyOfOriginalArray, size);
 //	cout << endl;
 //
@@ -152,8 +152,8 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 //		*(arrayToCopy + i) = *(originalArray + i);
 //}
 //
-//void TaskNumberTwo(int* originalArray, int* arrayToCopy, int size)	// –ешение 2-ой задачи, относительно оригинала, 
-//																	// изменено дл¤ корректного подсчета и вывода результатов. 
+//void TaskNumberTwo(int* originalArray, int* arrayToCopy, int size)	// Решение 2-ой задачи, относительно оригинала, 
+//																	// изменено для корректного подсчета и вывода результатов. 
 //{
 //	int leftIndex = 0;
 //	int rightIndex = size - 1;
@@ -187,7 +187,7 @@ void ShowOneDimensionalArray(TValue* arr, int size)
 //		TaskNumberThree
 //	};
 //
-//	cout << "»сходный массив:" << endl;
+//	cout << "Исходный массив:" << endl;
 //	int originalArray[Size];
 //	FillingOneDimensionalArrayInOrderOfOne(originalArray, Size);
 //	ShowOneDimensionalArray(originalArray, Size);
