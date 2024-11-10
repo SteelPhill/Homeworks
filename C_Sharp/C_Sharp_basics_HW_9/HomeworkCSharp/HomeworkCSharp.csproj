@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8C02296-AADE-4FA3-A45B-C8E4CC1654DD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>HomeworkCSharp</RootNamespace>
+    <AssemblyName>HomeworkCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ConsoleMenu\ConsoleMenu.cs" />
+    <Compile Include="Common\ConsoleColorTextWriter.cs" />
+    <Compile Include="Common\ConsoleMenu\IMenu.cs" />
+    <Compile Include="Common\ConsoleMenu\IMenuCommand.cs" />
+    <Compile Include="Common\ConsoleMenu\IMenuPrinter.cs" />
+    <Compile Include="Common\ConsoleMenu\IMenuSelector.cs" />
+    <Compile Include="Common\IColorTextWriter.cs" />
+    <Compile Include="Common\ConsoleMenu\ConsoleMenuPrinter.cs" />
+    <Compile Include="Common\ConsoleMenu\ConsoleMenuSelector.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="C_Sharp_basics_HW_9.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task1\Car.cs" />
+    <Compile Include="Task1\Cars\Chevrolet.cs" />
+    <Compile Include="Task1\Cars\Ferrari.cs" />
+    <Compile Include="Task1\Cars\Ford.cs" />
+    <Compile Include="Task1\Cars\Lamborghini.cs" />
+    <Compile Include="Task1\EndRaceException.cs" />
+    <Compile Include="Task1\IRaceResultWriter.cs" />
+    <Compile Include="Task1\IRaceTrackWriter.cs" />
+    <Compile Include="Task1\MainMenuCommands\StartRaceCommand.cs" />
+    <Compile Include="Task1\Race.cs" />
+    <Compile Include="Task1\RaceTrackWriter.cs" />
+    <Compile Include="Task1\RaceResultWriter.cs" />
+    <Compile Include="Task2\Card.cs" />
+    <Compile Include="Task2\CardsDeck.cs" />
+    <Compile Include="Task2\CardsFieldWriter.cs" />
+    <Compile Include="Task2\Game.cs" />
+    <Compile Include="Task2\ICardsFieldWriter.cs" />
+    <Compile Include="Task2\MainMenuCommands\RulesCommand.cs" />
+    <Compile Include="Task2\MainMenuCommands\NewGameCommand.cs" />
+    <Compile Include="Task2\Player.cs" />
+    <Compile Include="Task2\RankCard.cs" />
+    <Compile Include="Task2\SuitCard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
