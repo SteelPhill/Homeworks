@@ -1,0 +1,94 @@
+﻿<Window x:Class="WPFHomework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFHomework"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="160"
+        Width="310">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Column="0"
+                   VerticalAlignment ="Top"
+                   Margin="2">
+            <Button Margin="2"
+                    Foreground="Navy"
+                    Content="Navy"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Blue"
+                    Content="Blue"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Aqua"
+                    Content="Aqua"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Teal"
+                    Content="Teal"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Olive"
+                    Content="Olive"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Green"
+                    Content="Green"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Lime"
+                    Content="Lime"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Yellow"
+                    Content="Yellow"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Orange"
+                    Content="Orange"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Red"
+                    Content="Red"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Maroon"
+                    Content="Maroon"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Fuchsia"
+                    Content="Fuchsia"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Purple"
+                    Content="Purple"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Black"
+                    Content="Black"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Silver"
+                    Content="Silver"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="Gray"
+                    Content="Gray"
+                    Click="Button_Click" />
+            <Button Margin="2"
+                    Foreground="White"
+                    Content="White"
+                    Click="Button_Click" />
+        </WrapPanel>
+        <Grid x:Name="ChangingColor"
+              Grid.Column="1" />
+    </Grid>
+</Window>
