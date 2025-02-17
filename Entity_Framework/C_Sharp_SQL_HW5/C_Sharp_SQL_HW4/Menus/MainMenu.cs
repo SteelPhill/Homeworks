@@ -289,8 +289,8 @@ public static class MainMenu
         Dictionary<string, Func<ApplicationContext, Game, Task>> changeDataCommands = new()
         {
             { "Изменить название", ChangeGameName },
-            { "Изменить жанр", ChangeGameStudio },
-            { "Изменить студию", ChangeGameGenre },
+            { "Изменить жанр", ChangeGameGenre  },
+            { "Изменить студию", ChangeGameStudio},
             { "Изменить дату релиза", ChangeGameReleaseDate },
             { "Изменить количество проданных копий", ChangeGameSoldCopies },
             { "Изменить режим игры", ChangeGameMode }
