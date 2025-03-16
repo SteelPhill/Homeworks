@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NP_HW2_Server.Common\NP_HW2_Server.Common.csproj" />
+    <ProjectReference Include="..\NP_HW2_Server.Database\NP_HW2_Server.Database.csproj" />
+    <ProjectReference Include="..\NP_HW2_Server.Domain\NP_HW2_Server.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
