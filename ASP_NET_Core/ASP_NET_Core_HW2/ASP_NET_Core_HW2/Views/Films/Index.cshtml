@@ -1,0 +1,62 @@
+﻿@model FilmsIndexModel
+
+@{
+    ViewData["Title"] = "Фильмы";
+}
+
+<div class="container py-4">
+    <div class="text-center mb-4">
+        <h2 class="display-4">@ViewData["Title"]</h2>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table films-table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Films[0].Title)</th>
+                    <th>@Html.DisplayNameFor(model => model.Films[0].Sessions)</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var film in Model.Films.EmptyIfNull())
+                {
+                    <tr>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@film.Id" class="film-title-link">@film.Title</a>
+                        </td>
+                        <td>
+                            @if (film.Sessions != null && film.Sessions.Any())
+                            {
+                                <table class="table sessions-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Начало</th>
+                                            <th>Конец</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var session in film.Sessions)
+                                        {
+                                            <tr>
+                                                <td>@session.Begin.ToString("g")</td>
+                                                <td>@session.End.ToString("g")</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                            else
+                            {
+                                <p class="no-sessions mb-0">Нет доступных сеансов</p>
+                            }
+                        </td>
+                        <td>
+                            <a class="details-btn" asp-action="Details" asp-route-id="@film.Id">Подробнее</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
