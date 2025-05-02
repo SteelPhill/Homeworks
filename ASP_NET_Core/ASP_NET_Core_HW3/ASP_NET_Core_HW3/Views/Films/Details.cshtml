@@ -1,0 +1,59 @@
+﻿@model FilmDetailsModel
+
+@{
+    ViewData["Title"] = $"Подробная информация о фильме: {Model.Film.Title}";
+}
+
+<div class="container py-4">
+    <div class="text-center mb-4">
+        <h2 class="display-4">@ViewData["Title"]</h2>
+    </div>
+
+    <div class="mb-3">
+        <a asp-action="Index" class="btn btn btn-primary">К списку фильмов</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table details-table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Style)</th>
+                    <th>@Html.DisplayNameFor(model => model.Director)</th>
+                    <th>@Html.DisplayNameFor(model => model.Description)</th>
+                    <th>@Html.DisplayNameFor(model => model.Film.Sessions)</th>
+                </tr>
+            </thead>
+            <tr>
+                <td class="film-title">@Model.Style</td>
+                <td class="film-title">@Model.Director</td>
+                <td class="film-title">@Model.Description</td>
+                <td>
+                    @if (Model.Film.Sessions != null && Model.Film.Sessions.Any())
+                    {
+                        <table class="table sessions-table">
+                            <thead>
+                                <tr>
+                                    <th>Начало</th>
+                                    <th>Конец</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var session in Model.Film.Sessions)
+                                {
+                                    <tr>
+                                        <td>@session.Begin.ToString("g")</td>
+                                        <td>@session.End.ToString("g")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="no-sessions mb-0">Нет доступных сеансов</p>
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

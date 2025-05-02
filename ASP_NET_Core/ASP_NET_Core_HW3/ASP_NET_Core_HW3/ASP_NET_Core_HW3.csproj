@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Sessions\CreateSessionModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ASP_NET_Core_HW3.Common\ASP_NET_Core_HW3.Common.csproj" />
+    <ProjectReference Include="..\ASP_NET_Core_HW3.Database\ASP_NET_Core_HW3.Database.csproj" />
+    <ProjectReference Include="..\ASP_NET_Core_HW3.Domain\ASP_NET_Core_HW3.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
